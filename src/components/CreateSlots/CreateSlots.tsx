@@ -253,10 +253,6 @@ const CreateSlots: FC<CreateSlotsProps> = (props) => {
   const renderAdditionalCapacity = (availSlots: number, remaingCapacity: number, slotLists: slotItem[], startDate: Date, avgSlotCapacity: number, beginingDate: Date) => {
     for (let i = availSlots; i >= 1; i--) {
       const endDate = new Date(startDate.getTime() + 15 * 60000);
-      const fHH = startDate.getHours();
-      const fMM = startDate.getMinutes() === 0 ? '00' : startDate.getMinutes();
-      const tHH = endDate.getHours();
-      const tMM = endDate.getMinutes() === 0 ? '00' : endDate.getMinutes();
       const filteredItem = slotLists.filter(slot => slot.id === i)[0];
       if (filteredItem) {
         filteredItem.capacity += avgSlotCapacity > remaingCapacity ? remaingCapacity : avgSlotCapacity;
