@@ -13,12 +13,21 @@ interface slotItem {
 const ListSlots: FC<ListSlotsProps> = () => {
   const storageData = localStorage.getItem('slotLists');
   const listItems: slotItem[] = storageData ? JSON.parse(storageData) : [];
+  
+  const sortByKey = (array: any, key: string) => {
+    return array.sort(function(a: any, b: any) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+  }
+  sortByKey(listItems, 'id');
+
   const allRows = listItems && listItems.length > 0 && listItems.map((item: slotItem) => {
     return <tr key={item.id}>
-      <td></td>
       <td>{item.id}</td>
       <td>{item.slotText}</td>
       <td>{item.capacity}</td>
+      <td>Edit / Delete</td>
     </tr>
   });
   return (
