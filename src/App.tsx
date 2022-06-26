@@ -1,23 +1,24 @@
-import logo from "./logo.svg";
+import { Button } from "react-bootstrap";
 import style from "./App.module.scss";
+import Header from "./components/Header/Header";
+import PageView from "./components/PageView/PageView";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
   return (
-    <div className={style.App}>
-      <header className={style["App-header"]}>
-        <img src={logo} className={style["App-logo"]} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={style["App-link"]}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${style.App} flex-container flex-column h-100`}>
+      <div className={style['main-header']}>
+        <Header />
+      </div>
+      <div className={`${style['main-container']} flex-container flex-1`}>
+        <div className={style['side-bar']}>
+          <SideBar />
+        </div>
+        <div className="flex-conatiner flex-1">
+          <PageView />
+        </div>
+      </div>
+
     </div>
   );
 }

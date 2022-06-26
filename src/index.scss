@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,167 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.flex-container {
+  display: flex;
+  &.flex-column {
+    flex-direction: column;
+  }
+  &.v-align-c {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-between {
+    justify-content: space-between;
+  }
+}
+.flex-1 {
+  flex: 1;
+}
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.m-t-xxs {
+  margin-top: 5px;
+}
+.m-t-xs {
+  margin-top: 10px;
+}
+.m-t-s {
+  margin-top: 20px;
+}
+.m-b-xxs {
+  margin-bottom: 5px;
+}
+.m-b-xs {
+  margin-bottom: 10px;
+}
+.m-l-xxs {
+  margin-left: 5px;
+}
+.m-l-xs {
+  margin-left: 10px;
+}
+.m-r-xxs {
+  margin-right: 5px;
+}
+.m-l-xs {
+  margin-left: 10px;
+}
+.m-r-xs {
+  margin-right: 10px;
+}
+.m-b-xs {
+  margin-bottom: 10px;
+}
+.m-s {
+  margin: 20xp;
+}
+.m-t-l {
+  margin-top: 40px;
+}
+.p-x-s {
+  padding: 10px;
+}
+.p-s {
+  padding: 20px;
+}
+.p-l-s {
+  padding-left: 20px;
+}
+.p-r-s {
+  padding-right: 20px;
+}
+.p-t-s {
+  padding-top: 20px;
+}
+.p-b-s {
+  padding-bottom: 20px;
+}
+.relative {
+  position: relative;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.calendar-custom-class {
+  div:not(.react-datepicker__day--disabled) {
+      color: #09477D;
+      &.react-datepicker__current-month {
+          color: inherit;
+          font-weight: normal;
+      }
+  }
+  .react-datepicker__day {
+    &:hover {
+      border-radius: 50%;
+    }
+  }
+  .react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+    color: white !important;
+    border-radius: 50%;
+    background-color: #5fd1ef;
+    &:hover {
+      color: white !important;
+      border-radius: 50%;
+      background-color: #5fd1ef;
+    }
+  }
+  button {
+      top: 10px;
+      span {
+          &::before {
+              border-color: #09477D;
+              border-width: 1px 1px 0 0;
+          }
+      }
+  }
+}
+
+.btn {
+  font-size: 12px;
+  &.btn-primary {
+    color: #fff;
+    background-color: #23CFFD;
+    border-color: #23CFFD;
+  }
+}
+.text {
+  padding: 5px;
+  border-color: #dee2e6;
+  outline: none;
+  border-style: hidden;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  &.mini {
+    width: 45px;
+    height: 35px;
+    text-align: center;
+  }
+}
+.grey-text {
+  color: #AAAAAA;
+}
+.error {
+  color: red;
+}
+.tab-content {
+  height: 100%;
+}
+.inValid {
+  border-color: red;
 }

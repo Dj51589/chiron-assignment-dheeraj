@@ -1,0 +1,50 @@
+.CreateSlots {
+    ul {
+        border-bottom: 1px solid #dee2e6;
+        padding-left: 15px;
+    }
+    .tab-item-content {
+        padding: 20px;
+    }
+    .section-container {
+        .date-field, .time-field, .seating-capacity {
+            margin: 10px;
+        }
+        .seating-capacity {
+            width: 200px;
+            max-width: 200px;
+        }
+        .header {
+            color: #2A2A2A;
+        }
+        .sub-header {
+            color: #AAAAAA;
+            font-size: 10px;
+            margin: 5px 0px;
+        }
+        .time-container {
+            font-size: 10px;
+            width: 270px;
+            max-width: 270px;
+            .from-time {
+                width: 110px;
+            }
+            .to-time {
+                width: 135px;
+            }
+            .separator {
+                margin-top: 20px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                font-size: 15px;
+                color: #AAAAAA;                
+            }
+        }
+    }
+    .action {
+        position: fixed;
+        bottom: 100px;
+    }
+}
